@@ -6,8 +6,11 @@ namespace BankSimulation
 {
     class CustomerManager
     {
+        
         public void add(Customer customer)
         {
+            
+
             Console.WriteLine("Please enter your name : ");
             customer.name = Console.ReadLine();
             Console.WriteLine("Please enter your surname : ");
@@ -15,14 +18,20 @@ namespace BankSimulation
             Console.WriteLine("Please enter your mail adress : ");
             customer.mailAdress = Console.ReadLine();
             Console.WriteLine("Please enter your year of birth : ");
-            customer.dateOfBirth = Int32.Parse(Console.ReadLine());
+            customer.dateOfBirth = Console.ReadLine();
             Console.WriteLine("Please enter your identy card number : ");
-            customer.Id = (ulong)Int64.Parse(Console.ReadLine());
+            customer.Id = Console.ReadLine();
             Console.WriteLine("Please enter your phone number : ");
-            customer.phoneNumber = (ulong)Int64.Parse(Console.ReadLine());
-            
+            customer.phoneNumber = Console.ReadLine();
+
         }
-        public void listCustomer(Customer[] customer)
+
+        internal void listCustomer()
+        {
+            Console.WriteLine("Listed"); 
+        }
+
+        public void listCustomer(Customer customer)
         {
             //Console.WriteLine("name : " + customer.name);
             //Console.WriteLine("surname : " + customer.surname);
@@ -30,22 +39,28 @@ namespace BankSimulation
             //Console.WriteLine("date of birth : " + customer.dateOfBirth);
             //Console.WriteLine("ıdentify number : " + customer.Id);
             //Console.WriteLine("phone number : " + customer.phoneNumber);
-            foreach (Customer custom in customer)
-            {
-                Console.WriteLine("\nIdentify number : " + custom.Id + "\nCustomer name : " + custom.name + "\nCustomer surname : " + custom.surname + "\nMail Adress : " + custom.mailAdress + "\nDate Of Birth : " + custom.dateOfBirth + "\nPhone number : " + custom.phoneNumber);
-            }
+            //Console.WriteLine("\nIdentify number : " + custom.Id + "\nCustomer name : " + custom.name + "\nCustomer surname : " + custom.surname + "\nMail Adress : " + custom.mailAdress + "\nDate Of Birth : " + custom.dateOfBirth + "\nPhone number : " + custom.phoneNumber);
+
+
+            //foreach (string info in information)
+            //{
+            //    Console.WriteLine(info);
+            //}
+
+            Console.WriteLine("Listed");
         }
         public void deleteCustomer(Customer customer)
         { 
             customer.mailAdress = " ";
-            customer.dateOfBirth = 0;
-            customer.phoneNumber = 0;
+            customer.dateOfBirth = "";
+            customer.phoneNumber = "";
             Console.WriteLine(customer.Id +"  :  "+ customer.name + "" + customer.surname 
                 + " deleted on the system.");
             customer.name = " ";
             customer.surname = " ";
-            customer.Id = 0;
+            customer.Id = "";
         }
         //public void finance(Customer customer)
+        
     }
 }

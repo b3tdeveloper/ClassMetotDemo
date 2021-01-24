@@ -9,9 +9,9 @@ namespace BankSimulation
         public string name { get; set; }
         public string surname { get; set; }
         public string mailAdress { get; set; }
-        public int dateOfBirth { get; set; }
-        public ulong Id { get; set; }
-        public ulong phoneNumber { get; set; }
+        public string dateOfBirth { get; set; }
+        public string Id { get; set; }
+        public string phoneNumber { get; set; }
 
     }
 }

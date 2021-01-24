@@ -4,7 +4,7 @@ namespace BankSimulation
 {
     class Program
     {
-        private static object pass;
+       
 
         static void Main(string[] args)
         {
@@ -22,8 +22,7 @@ namespace BankSimulation
                     customerManager.add(customer);
                 }else if (selection == "2")
                 {
-                    _ = pass;
-                    //customerManager.listCustomer(customer);
+                    customerManager.listCustomer();
                 }else if (selection == "3")
                 {
                     customerManager.deleteCustomer(customer);
